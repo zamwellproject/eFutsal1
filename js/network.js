@@ -207,6 +207,7 @@ export class NetworkManager {
               this.iceGraceTimer = setTimeout(() => {
                 if (pc.iceConnectionState === 'disconnected') {
                   this._setStatus('FAILED', 'ICE terputus cukup lama. Coba pindah jaringan atau sambungkan ulang.', this._getDiagnostics());
+                }
                 this.iceGraceTimer = null;
               }, ICE_DISCONNECT_GRACE_MS);
             }
